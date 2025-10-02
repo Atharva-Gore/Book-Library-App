@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Library App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📚 Book Library</h1>
+
+  <div class="form-container">
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+    <select id="status">
+      <option value="unread">Unread</option>
+      <option value="read">Read</option>
+    </select>
+    <button onclick="addBook()">➕ Add Book</button>
+  </div>
+
+  <div class="filter-container">
+    <input type="text" id="search" placeholder="Search by title..." onkeyup="searchBooks()">
+    <select id="filter" onchange="filterBooks()">
+      <option value="all">All</option>
+      <option value="read">Read</option>
+      <option value="unread">Unread</option>
+    </select>
+  </div>
+
+  <div id="bookList" class="book-list"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
